@@ -13,6 +13,7 @@ function App() {
   const [tags, setTags] = useState([]);
   const [tagOnChange, setTagOnChange] = useState("");
 
+  
   useEffect(() => {
     axios
       .get("https://api.hatchways.io/assessment/students", {
@@ -23,6 +24,7 @@ function App() {
       .then((response) => setStudentData(response.data.students))
       .catch((err) => console.log(err));
   }, [setStudentData]);
+
 
   return (
     <div className="App flex_centralize">
